@@ -1,0 +1,36 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 1.5rem;
+}
+
+/* .card div {
+  width: 100%;
+} */
+
+.drinkImage {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 50vw;
+  max-height: 50vh;
+  min-width: 16rem;
+  min-height: 16rem;
+}
+
+.drinkInfo {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;
+  text-wrap: wrap;
+  border-top: 1px solid black;
+}
+
+.ingredientPreview {
+  max-width: 15rem;
+}
+
+.recipeButton {
+  max-width: 25%;
+}

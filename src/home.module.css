@@ -1,0 +1,21 @@
+.title {
+  padding-bottom: 6rem;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.menuButton {
+  border: 2px solid black;
+  padding: 3rem;
+  max-width: 33%;
+}
+
+.menuButton:hover {
+  cursor: pointer;
+}

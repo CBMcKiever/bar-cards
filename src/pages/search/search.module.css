@@ -1,0 +1,11 @@
+.searchContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.searchResults {
+  flex-grow: 1;
+  width: 100%;
+}
