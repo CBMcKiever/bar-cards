@@ -1,0 +1,4 @@
+drinkContainer {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,3 +1,3 @@
 export const Ingredient = () => {
-  return <div>Ingredient Search</div>;
-};
+    return <div>Ingredient Search</div>
+}
