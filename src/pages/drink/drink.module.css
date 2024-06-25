@@ -1,4 +1,22 @@
-drinkContainer {
+.drinkContainer {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.drinkImageContainer {
+  width: 50%;
+  margin: auto;
+  padding: 2rem;
+}
+
+.drinkImage {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.drinkDetail {
+  width: 50%;
+  padding: 2rem;
 }

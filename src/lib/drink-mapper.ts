@@ -11,7 +11,7 @@ export const mapDrinks = (drinkSources: DrinkSource[]): Drink[] => {
         instructions: drink.strInstructions || '',
         ingredients: mapIngredients(drink),
         thumbnailSource: drink.strDrinkThumb || '',
-    }))
+    })) || [];
 }
 
 const mapIngredients = (drink: DrinkSource): Ingredient[] => {
