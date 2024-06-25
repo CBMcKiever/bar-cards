@@ -1,4 +1,3 @@
-import { mapDrinks } from '../../lib/drink-mapper'
 import { useRandom } from './api/getRandom'
 import { TbRefresh } from 'react-icons/tb'
 import { Drink } from '../../types/Drink'
@@ -10,12 +9,16 @@ import { Button } from '@mantine/core'
 export const Random = () => {
   const { data, isLoading, refetch } = useRandom()
   const [loaded, setLoaded] = useState(false)
-  const mappedDrinks: Drink[] = mapDrinks(data?.data?.drinks)
+  const drinks: Drink[] = data || [];
   const refreshIcon = <TbRefresh />
 
   const handleImageLoad = () => {
     console.log('image loaded')
     setLoaded(true)
+  }
+
+  const handleRefetch = () => {
+    refetch();
   }
 
   if (isLoading && !loaded) {
@@ -26,10 +29,10 @@ export const Random = () => {
     <div className={styles.container}>
       <DrinkCard
         onImageLoad={handleImageLoad}
-        drink={mappedDrinks?.[0]}
+        drink={drinks?.[0]}
       />
       <Button
-        onClick={refetch}
+        onClick={handleRefetch}
         mt="sm"
         className={styles.rerollButton}
         leftSection={refreshIcon}

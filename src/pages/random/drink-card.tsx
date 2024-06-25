@@ -1,16 +1,14 @@
-import { Card, Text, ColorPicker, Button } from '@mantine/core'
+import { Card, Text, Button } from '@mantine/core'
 import { Drink } from '../../types/Drink'
-import { Ingredient } from '../ingredient/ingredient'
 import styles from './drink-card.module.css'
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
+
 export type DrinkCardProps = {
   drink: Drink
   onImageLoad: () => void
 }
 
 export const DrinkCard = ({ drink, onImageLoad }: DrinkCardProps) => {
-  const [value, onChange] = useState('rgba(47, 119, 150, 0.7)')
   return (
     <Card withBorder radius="xl">
       <Card.Section>
