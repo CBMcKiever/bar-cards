@@ -7,7 +7,7 @@ const ITEMS_PER_PAGE = 25;
 const fetchIngredientList = async (): Promise<string[]> => {
   const response = await Axios.get('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list');
   console.log("RESPONSE: ", response);
-  return  response.data.drinks.map(ingredientObj => ingredientObj.strIngredient1);
+  return  response.data.drinks.map(ingredientObj => ingredientObj.strIngredient1).sort();
 }
 
 const fetchIngredientDetail = async (name: string) => {
